@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FileText, Eye, EyeOff, ArrowRight } from 'lucide-react';
+import { FileText, Eye, EyeOff, ArrowRight, Moon, Sun } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { useTheme } from '../hooks/useTheme';
 import Button from '../components/ui/Button';
@@ -48,9 +48,10 @@ export default function LoginPage() {
         </div>
         <button
           onClick={toggle}
-          className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          aria-label="Toggle theme"
+          className="h-8 w-8 inline-flex items-center justify-center rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-transparent text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
         >
-          {dark ? <Eye className="w-5 h-5" /> : <EyeOff className="w-5 h-5" />}
+          {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
         </button>
       </div>
 
